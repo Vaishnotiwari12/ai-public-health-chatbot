@@ -22,13 +22,13 @@ export default defineConfig({
   },
   plugins: [react()],
   server: {
-    port: 4028,
+    port: 4030,
     host: '0.0.0.0',
     strictPort: true,
     open: true
   },
   preview: {
-    port: 4028,
+    port: 4031,
     strictPort: true
   }
 });
