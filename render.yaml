@@ -3,7 +3,7 @@ services:
     name: ai-public-health-chatbot
     env: node
     root: backend
-    buildCommand: npm install
+    buildCommand: npm ci
     startCommand: node app.js
     envVars:
       - key: NODE_ENV
