@@ -4,7 +4,11 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',  // Add this for proper static asset paths
+  base: './',
+  define: {
+    'import.meta.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL),
+    'import.meta.env.VITE_GEMINI_API_KEY': JSON.stringify(process.env.VITE_GEMINI_API_KEY)
+  },
   build: {
     outDir: 'dist',
     chunkSizeWarningLimit: 2000,
