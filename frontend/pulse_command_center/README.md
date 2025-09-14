@@ -34,7 +34,7 @@ A modern React-based project utilizing the latest frontend technologies and tool
    # or
    yarn start
    ```
-[OpenAI](pulse-command-center.vercel.app
+(pulse-command-center.vercel.app
 )
 
 
