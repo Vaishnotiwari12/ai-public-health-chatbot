@@ -14,7 +14,11 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/frontend/pulse_command_center/index.html"
+      "dest": "/index.html"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
     }
   ]
 }
