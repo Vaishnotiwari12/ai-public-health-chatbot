@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Enhanced Background Colors for Health Theme */
+    --color-background: #f8fafc; /* slate-50 - Light, clean medical environment */
+    --color-foreground: #0f172a; /* slate-900 - High contrast for readability */
+    --color-card: #ffffff; /* white - Clean medical card backgrounds */
+    --color-card-foreground: #0f172a; /* slate-900 */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #0f172a; /* slate-900 */
+    --color-muted: #f1f5f9; /* slate-100 - Subtle background variations */
+    --color-muted-foreground: #64748b; /* slate-500 - Accessible secondary text */
+    
+    /* Primary Colors - Health & Medical Theme */
+    --color-primary: #1e40af; /* blue-700 - Medical trust and reliability */
+    --color-primary-foreground: #ffffff; /* white - High contrast on primary */
+    
+    /* Secondary Colors - Health & Wellness */
+    --color-secondary: #0f766e; /* teal-700 - Health, growth, healing */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* FIXED Accent Colors - Critical Alert Visibility Enhancement */
+    --color-accent: #dc2626; /* red-600 - FIXED: High contrast red for critical alerts */
+    --color-accent-foreground: #ffffff; /* white - Ensures text visibility on red background */
+    
+    /* Success Colors - Positive Health Indicators */
+    --color-success: #059669; /* emerald-600 - Healing, health, positive outcomes */
+    --color-success-foreground: #ffffff; /* white */
+    
+    /* Warning Colors - Caution & Monitoring */
+    --color-warning: #d97706; /* amber-600 - Attention, monitoring needed */
+    --color-warning-foreground: #ffffff; /* white */
+    
+    /* Error/Destructive Colors - Critical Health Alerts */
+    --color-error: #dc2626; /* red-600 - Medical emergencies, critical alerts */
+    --color-error-foreground: #ffffff; /* white */
+    --color-destructive: #dc2626; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    /* Border and Input Colors - Clean Medical Interface */
+    --color-border: #e2e8f0; /* slate-200 - Subtle, professional borders */
+    --color-input: #e2e8f0; /* slate-200 - Clean input field borders */
+    --color-ring: #1e40af; /* blue-700 - Focus indicators */
+    
+    /* Text Colors - Medical Grade Readability */
+    --color-text-primary: #0f172a; /* slate-900 - Primary text with high contrast */
+    --color-text-secondary: #475569; /* slate-600 - Secondary information text */
+    
+    /* Surface Colors - Medical Environment */
+    --color-surface: #f8fafc; /* slate-50 - Clean surface for medical data */
+    
+    /* Conversion CTA Color - Action Items */
+    --color-cta: #7c3aed; /* violet-600 - Call-to-action elements */
+    --color-cta-foreground: #ffffff; /* white */
+    
+    /* Trust Builder Color - Reliability Indicators */
+    --color-trust: #0891b2; /* cyan-600 - Trust, reliability, stability */
+    --color-trust-foreground: #ffffff; /* white */
+    
+    /* Health-Specific Color Enhancements */
+    --color-critical-alert: #dc2626; /* red-600 - Life-threatening alerts */
+    --color-critical-alert-bg: #fef2f2; /* red-50 - Alert background */
+    --color-moderate-alert: #d97706; /* amber-600 - Moderate health concerns */
+    --color-moderate-alert-bg: #fffbeb; /* amber-50 - Moderate alert background */
+    --color-healthy-status: #059669; /* emerald-600 - Healthy, good status */
+    --color-healthy-status-bg: #ecfdf5; /* emerald-50 - Healthy status background */
+    
+    /* Radius - Medical Interface Standards */
+    --radius: 0.5rem; /* 8px - Professional, clean corners */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    /* Enhanced for medical readability */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    /* Enhanced hierarchy for medical information */
+    line-height: 1.4;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* REMOVED ANIMATIONS - Performance & Accessibility Improvement */
+  /* All pulse animations removed per user request for notifications */
+  
+  /* Static Health Status Indicators - No Animation */
+  .health-status-indicator {
+    transition: none; /* No animations for better performance */
+  }
+  
+  /* Critical Alert Styling - ENHANCED VISIBILITY */
+  .critical-alert {
+    @apply bg-red-500 text-white border-2 border-red-300;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4); /* Enhanced shadow for visibility */
+    font-weight: 600; /* Bold text for critical alerts */
+  }
+  
+  .critical-alert-text {
+    @apply text-red-800 font-bold;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Enhanced text visibility */
+  }
+  
+  /* Success Status - No Animation */
+  .success-status {
+    @apply bg-emerald-500 text-white;
+    /* Static styling, no pulse animation */
+  }
+  
+  /* Warning Status - No Animation */
+  .warning-status {
+    @apply bg-amber-500 text-white;
+    /* Static styling, no pulse animation */
+  }
+  
+  /* Medical Precision Shadows - Enhanced for Health Theme */
+  .shadow-medical {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+  
+  .shadow-medical-lg {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-medical-xl {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Health Authority Glow Effect */
+  .glow-health-authority {
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.25);
+  }
+  
+  /* Enhanced CTA Hover Effects - Health Theme */
+  .health-cta-hover {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .health-cta-hover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3); /* Blue medical theme */
+  }
+  
+  /* Smooth Transitions - Reduced for Performance */
+  .transition-smooth {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Faster transitions */
+  }
+  
+  .transition-quick {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); /* Very fast transitions */
+  }
+
+  /* Enhanced Mobile-Responsive Utilities */
+  .mobile-stack {
+    @apply flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3;
+  }
+  
+  .mobile-grid {
+    @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4;
+  }
+  
+  .mobile-grid-auto {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  }
+
+  /* ENHANCED Visibility for Critical Elements */
+  .critical-visible {
+    @apply text-red-800 bg-red-100 border-2 border-red-300;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Enhanced text shadow */
+    font-weight: 600; /* Bold for better visibility */
+  }
+  
+  .alert-visible {
+    @apply bg-red-500 text-white border-2 border-red-300;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4); /* Enhanced shadow */
+  }
+  
+  /* High Contrast Text for Medical Data */
+  .medical-text-high-contrast {
+    @apply text-slate-900;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+
+  /* Enhanced Responsive Text Sizing - Mobile First */
+  .responsive-text-xs {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .responsive-text-sm {
+    @apply text-sm sm:text-base;
+  }
+  
+  .responsive-text-base {
+    @apply text-base sm:text-lg;
+  }
+  
+  .responsive-text-lg {
+    @apply text-lg sm:text-xl;
+  }
+  
+  .responsive-text-xl {
+    @apply text-xl sm:text-2xl;
+  }
+  
+  .responsive-text-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+  
+  /* Health Theme Gradient Backgrounds */
+  .gradient-health-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+  
+  .gradient-health-success {
+    background: linear-gradient(135deg, var(--color-success) 0%, var(--color-trust) 100%);
+  }
+  
+  .gradient-health-alert {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warning) 100%);
+  }
+  
+  /* Medical Card Styling */
+  .medical-card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-medical p-4 sm:p-6;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .medical-card:hover {
+    @apply shadow-medical-lg border-slate-300;
+  }
+  
+  .medical-card-critical {
+    @apply border-red-300 bg-red-50;
+  }
+  
+  .medical-card-warning {
+    @apply border-amber-300 bg-amber-50;
+  }
+  
+  .medical-card-success {
+    @apply border-emerald-300 bg-emerald-50;
+  }
+}
+
+@layer utilities {
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Enhanced Backdrop Blur for Medical Interface */
+  .backdrop-blur-medical {
+    backdrop-filter: blur(12px) saturate(1.3); /* Enhanced blur for better focus */
+  }
+  
+  .backdrop-blur-medical-light {
+    backdrop-filter: blur(8px) saturate(1.1);
+  }
+  
+  /* Grid Utilities - Medical Layout */
+  .grid-medical-auto {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  }
+  
+  .grid-medical-cards {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  }
+  
+  /* Enhanced Scrollbar Styling - Medical Theme */
+  .scrollbar-medical {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) transparent;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar-track {
+    background: var(--color-surface);
+    border-radius: 4px;
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+    border: 2px solid var(--color-surface);
+  }
+  
+  .scrollbar-medical::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+  }
+  
+  /* Standard Thin Scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-muted-foreground);
+  }
+
+  /* Mobile Safe Area Support - Enhanced */
+  .safe-top {
+    padding-top: max(16px, env(safe-area-inset-top));
+  }
+  
+  .safe-bottom {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+  
+  .safe-left {
+    padding-left: max(16px, env(safe-area-inset-left));
+  }
+  
+  .safe-right {
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+
+  /* Enhanced Focus States for Medical Accessibility */
+  .focus-medical {
+    @apply focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none;
+  }
+  
+  .focus-enhanced {
+    @apply focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none;
+  }
+
+  /* Mobile Touch Targets - Medical Standards */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  .touch-target-large {
+    @apply min-h-[48px] min-w-[48px];
+  }
+  
+  /* Health Status Indicators */
+  .status-healthy {
+    @apply bg-emerald-500 text-white;
+  }
+  
+  .status-warning {
+    @apply bg-amber-500 text-white;
+  }
+  
+  .status-critical {
+    @apply bg-red-500 text-white;
+  }
+  
+  /* Medical Priority Levels */
+  .priority-low {
+    @apply border-l-4 border-emerald-500 bg-emerald-50;
+  }
+  
+  .priority-medium {
+    @apply border-l-4 border-amber-500 bg-amber-50;
+  }
+  
+  .priority-high {
+    @apply border-l-4 border-red-500 bg-red-50;
+  }
+  
+  .priority-critical {
+    @apply border-l-4 border-red-600 bg-red-100;
+  }
+}
+
+/* Enhanced Health Theme Backgrounds */
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  background-attachment: fixed;
+}
+
+/* Dark Mode Support - Medical Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0f172a; /* Dark medical background */
+    --color-foreground: #f1f5f9;
+    --color-card: #1e293b; /* Dark medical cards */
+    --color-card-foreground: #f1f5f9;
+    --color-muted: #334155;
+    --color-muted-foreground: #94a3b8;
+    --color-border: #334155;
+  }
+}
+
+/* Print Styles - Medical Reports */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-visible {
+    display: block !important;
+  }
+  
+  .medical-card {
+    @apply border border-slate-400 shadow-none;
+    break-inside: avoid;
+  }
+}
+
+/* High Contrast Mode Support - Medical Accessibility */
+@media (prefers-contrast: high) {
+  :root {
+    --color-accent: #000000;
+    --color-accent-foreground: #ffffff;
+    --color-primary: #000080; /* High contrast blue */
+    --color-success: #008000; /* High contrast green */
+    --color-error: #800000; /* High contrast red */
+  }
+  
+  .critical-alert {
+    border: 3px solid currentColor !important;
+  }
+}
+
+/* Reduced Motion Support - Medical Interface */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .transition-smooth,
+  .transition-quick,
+  .health-cta-hover {
+    transition: none !important;
+  }
+}
+
+/* Enhanced Typography Scale for Medical Data */
+.text-medical-xs { font-size: 0.75rem; line-height: 1.5; }
+.text-medical-sm { font-size: 0.875rem; line-height: 1.5; }
+.text-medical-base { font-size: 1rem; line-height: 1.6; }
+.text-medical-lg { font-size: 1.125rem; line-height: 1.6; }
+.text-medical-xl { font-size: 1.25rem; line-height: 1.5; }
+.text-medical-2xl { font-size: 1.5rem; line-height: 1.4; }
+.text-medical-3xl { font-size: 1.875rem; line-height: 1.3; }

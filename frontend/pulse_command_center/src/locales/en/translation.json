@@ -1,0 +1,80 @@
+{
+  "welcome": "Welcome to HealthBot! How can I help you today?",
+  "language": "Language",
+  "hindi": "हिंदी",
+  "english": "English",
+  "inputPlaceholder": "Type your health query...",
+  
+  "quickActions": {
+    "symptoms": "Check symptoms",
+    "vaccine": "Vaccine schedule",
+    "hospitals": "Nearby hospitals",
+    "emergency": "Emergency"
+  },
+  
+  "tabs": {
+    "analytics": "Analytics",
+    "chat": "Chat",
+    "symptoms": "Symptoms",
+    "vaccines": "Vaccines",
+    "hospitals": "Hospitals"
+  },
+  
+  "analytics": {
+    "healthTrends": "Health Trends",
+    "vaccination": "Vaccination Coverage",
+    "symptomDistribution": "Symptom Distribution",
+    "communityInsights": "Community Insights",
+    "firstDose": "First Dose",
+    "secondDose": "Second Dose",
+    "booster": "Booster",
+    "loading": "Loading analytics...",
+    "error": "Failed to load analytics data"
+  },
+  
+  "emergency": {
+    "title": "Emergency Help",
+    "message": "Calling emergency services..."
+  },
+  
+  "symptomChecker": {
+    "title": "Symptom Checker",
+    "searchPlaceholder": "Search symptoms...",
+    "selectedSymptoms": "Selected Symptoms",
+    "checkButton": "Check Symptoms",
+    "results": "Possible Conditions",
+    "consultDoctor": "Please consult a healthcare professional for accurate diagnosis.",
+    "selectSymptoms": "Please select symptoms to check"
+  },
+  
+  "facilityCapacity": {
+    "title": "Health Facility Capacity",
+    "generalBeds": "General Beds",
+    "icuBeds": "ICU Beds",
+    "staffAvailability": "Staff Availability",
+    "available": "Available",
+    "occupied": "Occupied",
+    "total": "Total",
+    "ventilators": "Ventilators",
+    "statusGood": "Good",
+    "statusWarning": "Warning",
+    "statusCritical": "Critical",
+    "bedCapacityOverview": "Bed Capacity Overview",
+    "staffStatus": {
+      "good": "Good Staffing",
+      "warning": "Staff Stretched",
+      "critical": "Staff Shortage"
+    }
+  },
+
+  "vaccines": {
+    "title": "Vaccination Schedule",
+    "due": "Due"
+  },
+  
+  "hospitals": {
+    "nearby": "Nearby Healthcare Facilities",
+    "waitTime": "wait time",
+    "directions": "Directions"
+  }
+}

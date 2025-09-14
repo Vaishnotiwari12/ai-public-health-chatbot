@@ -1,0 +1,80 @@
+{
+  "welcome": "स्वास्थ्य बॉट में आपका स्वागत है! मैं आपकी कैसे मदद कर सकता हूं?",
+  "language": "भाषा",
+  "hindi": "हिंदी",
+  "english": "अंग्रेज़ी",
+  "inputPlaceholder": "अपना स्वास्थ्य प्रश्न लिखें...",
+  
+  "quickActions": {
+    "symptoms": "लक्षण जांचें",
+    "vaccine": "टीकाकरण कार्यक्रम",
+    "hospitals": "नजदीकी अस्पताल",
+    "emergency": "आपातकालीन"
+  },
+  
+  "tabs": {
+    "analytics": "विश्लेषण",
+    "chat": "चैट",
+    "symptoms": "लक्षण",
+    "vaccines": "टीके",
+    "hospitals": "अस्पताल"
+  },
+  
+  "analytics": {
+    "healthTrends": "स्वास्थ्य रुझान",
+    "vaccination": "टीकाकरण कवरेज",
+    "symptomDistribution": "लक्षण वितरण",
+    "communityInsights": "सामुदायिक अंतर्दृष्टि",
+    "firstDose": "पहली खुराक",
+    "secondDose": "दूसरी खुराक",
+    "booster": "बूस्टर",
+    "loading": "विश्लेषण लोड हो रहा है...",
+    "error": "विश्लेषण डेटा लोड करने में विफल"
+  },
+  
+  "emergency": {
+    "title": "आपातकालीन सहायता",
+    "message": "आपातकालीन सेवाओं को कॉल किया जा रहा है..."
+  },
+  
+  "symptomChecker": {
+    "title": "लक्षण जांचकर्ता",
+    "searchPlaceholder": "लक्षण खोजें...",
+    "selectedSymptoms": "चयनित लक्षण",
+    "checkButton": "लक्षण जांचें",
+    "results": "संभावित स्थितियां",
+    "consultDoctor": "सटीक निदान के लिए कृपया किसी स्वास्थ्य सेवा पेशेवर से परामर्श लें।",
+    "selectSymptoms": "जांच के लिए कृपया लक्षण चुनें"
+  },
+  
+  "facilityCapacity": {
+    "title": "स्वास्थ्य सुविधा क्षमता",
+    "generalBeds": "सामान्य बिस्तर",
+    "icuBeds": "आईसीयू बिस्तर",
+    "staffAvailability": "स्टाफ की उपलब्धता",
+    "available": "उपलब्ध",
+    "occupied": "कब्ज़ा किया हुआ",
+    "total": "कुल",
+    "ventilators": "वेंटिलेटर",
+    "statusGood": "अच्छा",
+    "statusWarning": "चेतावनी",
+    "statusCritical": "गंभीर",
+    "bedCapacityOverview": "बिस्तर क्षमता अवलोकन",
+    "staffStatus": {
+      "good": "पर्याप्त स्टाफ",
+      "warning": "स्टाफ कम",
+      "critical": "गंभीर स्टाफ की कमी"
+    }
+  },
+
+  "vaccines": {
+    "title": "टीकाकरण कार्यक्रम",
+    "due": "नियत तिथि"
+  },
+  
+  "hospitals": {
+    "nearby": "नजदीकी स्वास्थ्य सुविधाएं",
+    "waitTime": "प्रतीक्षा समय",
+    "directions": "दिशा-निर्देश"
+  }
+}
