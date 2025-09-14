@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "cd frontend/pulse_command_center && npm install && npm run build",
+  "outputDirectory": "frontend/pulse_command_center/dist",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
