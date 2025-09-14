@@ -34,6 +34,10 @@ A modern React-based project utilizing the latest frontend technologies and tool
    # or
    yarn start
    ```
+(pulse-command-center.vercel.app
+)
+
+
 
 ## 📁 Project Structure
 
@@ -100,7 +104,6 @@ npm run build
 
 ## 🙏 Acknowledgments
 
-- Built with [Rocket.new]
 - Powered by React and Vite
 - Styled with Tailwind CSS
 
