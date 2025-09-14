@@ -34,6 +34,9 @@ A modern React-based project utilizing the latest frontend technologies and tool
    # or
    yarn start
    ```
+LIVE DEMO --[Click here](pulse-command-center.vercel.app
+)
+
 
 ## 📁 Project Structure
 
