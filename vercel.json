@@ -1,11 +1,20 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend/pulse_command_center && npm install && npm run build",
-  "outputDirectory": "frontend/pulse_command_center/dist",
+  "builds": [
+    {
+      "src": "frontend/pulse_command_center/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "installCommand": "cd frontend/pulse_command_center && npm install",
+        "buildCommand": "cd frontend/pulse_command_center && npm run build"
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/frontend/pulse_command_center/index.html"
     }
   ]
 }
